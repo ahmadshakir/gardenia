@@ -5,9 +5,9 @@ namespace gardenia.Model;
 
 public partial class Survey
 {
-    public int Id { get; set; }
+    public int Id { get; }
 
     public DateTime SubmitTime { get; set; }
 
-    public virtual ICollection<SurveyAnswer> SurveyAnswers { get; set; } = new List<SurveyAnswer>();
+    //public virtual ICollection<SurveyAnswer> SurveyAnswers { get; set; } = new List<SurveyAnswer>();
 }

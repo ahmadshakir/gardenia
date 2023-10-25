@@ -5,7 +5,6 @@ namespace gardenia.Model;
 
 public partial class SurveyQuestion
 {
-    public int Id { get; set; }
-
+    public int Id { get; }
     public string Question { get; set; } = null!;
 }

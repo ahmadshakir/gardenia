@@ -44,6 +44,7 @@ namespace gardenia.Controllers
 
         // PUT: api/Survey/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [ApiExplorerSettings(IgnoreApi = true)]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSurvey(int id, Survey survey)
         {

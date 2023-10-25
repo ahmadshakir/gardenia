@@ -43,10 +43,10 @@ public partial class SurveyContext : DbContext
                 .HasColumnName("answer");
             entity.Property(e => e.SurveysFk).HasColumnName("surveys_fk");
 
-            entity.HasOne(d => d.SurveysFkNavigation).WithMany(p => p.SurveyAnswers)
-                .HasForeignKey(d => d.SurveysFk)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_SurveyAnswers_Surveys");
+            //entity.HasOne(d => d.SurveysFkNavigation).WithMany(p => p.SurveyAnswers)
+            //    .HasForeignKey(d => d.SurveysFk)
+            //    .OnDelete(DeleteBehavior.ClientSetNull)
+            //    .HasConstraintName("FK_SurveyAnswers_Surveys");
         });
 
         modelBuilder.Entity<SurveyQuestion>(entity =>

@@ -9,5 +9,5 @@ public partial class Survey
 
     public DateTime SubmitTime { get; set; }
 
-    //public virtual ICollection<SurveyAnswer> SurveyAnswers { get; set; } = new List<SurveyAnswer>();
+    public ICollection<SurveyAnswer> SurveyAnswers { get; set; }
 }

@@ -7,7 +7,7 @@ public partial class SurveyAnswer
 {
     public int Id { get; }
 
-    public int SurveysFk { get; set; }
+    public int SurveyId { get; set; }
 
     public string Answer { get; set; } = null!;
 

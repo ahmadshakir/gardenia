@@ -33,6 +33,7 @@ public partial class SurveyContext : DbContext
             entity.Property(e => e.SubmitTime)
                 .HasColumnType("datetime")
                 .HasColumnName("submit_time");
+            entity.HasMany(e => e.SurveyAnswers);
         });
 
         modelBuilder.Entity<SurveyAnswer>(entity =>
@@ -41,12 +42,14 @@ public partial class SurveyContext : DbContext
             entity.Property(e => e.Answer)
                 .HasColumnType("text")
                 .HasColumnName("answer");
-            entity.Property(e => e.SurveysFk).HasColumnName("surveys_fk");
+            entity.Property(e => e.SurveyId).HasColumnName("surveys_fk");
 
             //entity.HasOne(d => d.SurveysFkNavigation).WithMany(p => p.SurveyAnswers)
             //    .HasForeignKey(d => d.SurveysFk)
             //    .OnDelete(DeleteBehavior.ClientSetNull)
             //    .HasConstraintName("FK_SurveyAnswers_Surveys");
+
+
         });
 
         modelBuilder.Entity<SurveyQuestion>(entity =>
